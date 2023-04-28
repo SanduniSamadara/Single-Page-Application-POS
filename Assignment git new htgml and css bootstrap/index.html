@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 6 Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assests/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cc74b92efe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand text-body-emphasis" href="#"><h1>Uresha POS System</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Items</a>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Others
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <div class=" d-flex ">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Log Out</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+</header>
+<hr>
+
+<main>
+
+    <section class="section-customer container">
+        <h2><i class="fa-solid fa-people-line"></i>  Customer</h2>
+       <div>
+           <article class="search">
+               <label class="bg-primary" for="searchCustomer">Search Customer</label>
+               <input id="searchCustomer" class="form-control form-control-sm" type="text"
+                      placeholder="Input Name/NIC/Tp Here" aria-label=".form-control-sm example">
+               <button type="button" class="btn btn-success">Serach</button>
+           </article>
+           <div class="btnSide">
+               <!-- Button trigger modal -->
+               <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">New Customer</button>
+               <!-- Button trigger modal -->
+               <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">View Customers</button>
+           </div>
+       </div>
+        <div class="butttonList">
+            <button type="button" class="btn btn-danger">Delete</button>
+            <button type="button" class="btn btn-info">Details</button>
+            <button type="button" class="btn btn-success">Clear</button>
+        </div>
+        <div>
+
+            <table class="table mt-3 bg-body-tertiary">
+                <thead>
+                <tr>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Tp</th>
+                    <th scope="col">Salary</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">C003</th>
+                    <td>Malitha</td>
+                    <td>Panadura</td>
+                    <td>10000.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">C004</th>
+                    <td>Siripala</td>
+                    <td>Galle</td>
+                    <td>24000.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">C005</th>
+                    <td>Jinadasa</td>
+                    <td>Panadura</td>
+                    <td>94000.00</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+    <br><br>
+    <section class="section-item container">
+<!-- me mekt item ekk dnko dn e athi ee kiwwe name d ne namai item ekai dekma -->
+        <h2><i class="fa-solid fa-boxes-stacked"></i> Items</h2>
+        <div>
+            <article class="search">
+                <label class="bg-primary" for="searchCustomer">Search Customer</label>
+                <input id="searchItem" class="form-control form-control-sm" type="text"
+                       placeholder="Input Name/NIC/Tp Here" aria-label=".form-control-sm example">
+                <button type="button" class="btn btn-success">Serach</button>
+            </article>
+            <div class="btnSide">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">New Item</button>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">View All Items</button>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <table class="table mt-3 bg-body-tertiary">
+                <thead>
+                <tr>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">111</th>
+                    <td>1111</td>
+                    <td>11.00</td>
+                    <td>111</td>
+                </tr>
+                <tr>
+                    <th scope="row">P002</th>
+                    <td>Keerisamba 5kg</td>
+                    <td>525.00</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <th scope="row">P003</th>
+                    <td>Keerisamba 10kg</td>
+                    <td>995.00</td>
+                    <td>36</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+    <br><br>
+
+
+    <div>
+        <article class="search">
+            <label class="bg-primary" for="searchCustomer">Invoice Details</label>
+
+            <form>
+                <label for="oid">Order Id</label><br>
+                <input type="text" id="oid"><br><br>
+
+                <label for="customer">Customer</label><br>
+                <input type="text" id="customer"><br><br>
+
+                <label for="name">Name</label><br>
+                <input type="text" id="name"><br><br>
+
+                <label for="address">Address</label><br>
+                <input type="text" id="address"><br><br>
+
+                <label for="date">Date</label><br>
+                <input type="date" id="date"><br><br>
+
+                <label for="customerid">Customer Id</label><br>
+                <input type="text" id="customerid"><br><br>
+
+                <label for="salary">Salary</label><br>
+                <input type="text" id="salary"><br><br>
+            </form>
+
+        </article>
+
+        <article class="search">
+            <label class="bg-primary" for="searchCustomer">Item Select</label>
+
+            <form>
+                <label for="item">Item</label><br>
+                <input type="text" id="item"><br><br>
+
+                <label for="itemcode">Item Code</label><br>
+                <input type="text" id="itemcode"><br><br>
+
+                <label for="itemname">Item Name</label><br>
+                <input type="text" id="itemname"><br><br>
+
+                <label for="price">Price</label><br>
+                <input type="text" id="price"><br><br>
+
+                <label for="qty">QtyOnH</label><br>
+                <input type="text" id="qty"><br><br>
+
+                <label for="order">Order Quantity</label><br>
+                <input type="text" id="order"><br><br>
+
+                <button type="button" class="btn btn-success">Add Item</button>
+            </form>
+
+        </article>
+
+
+        <article class="search">
+
+            <form>
+
+
+                <label for="ttl">Total: 1050Rs/=</label><br>
+                <input type="" id="ttl"><br><br>
+
+                <label for="sttl">Sub Total: 945Rs/=</label><br>
+                <input type="" id="sttl"><br><br>
+
+                <label for="cash">Cash</label><br>
+                <input type="text" id="cash"><br><br>
+
+                <label for="discount">Discount</label><br>
+                <input type="text" id="discount"><br><br>
+
+                <label for="balance">Balance</label><br>
+                <input type="text" id="balance"><br><br>
+
+                <button type="button" class="btn btn-success">Purchase</button>
+            </form>
+
+        </article>
+
+    </div>
+
+    </section>
+</main>
+
+
+<!--=============================================================-->
+<script src="assests/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

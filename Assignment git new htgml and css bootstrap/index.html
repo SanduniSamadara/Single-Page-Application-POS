@@ -2,64 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Assignment 6 Bootstrap</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assests/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>POS System</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="assests/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/cc74b92efe.js" crossorigin="anonymous"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/cc74b92efe.js"></script>
 </head>
 <body>
 
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand text-body-emphasis" href="#"><h1>Uresha POS System</h1></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand text-body-emphasis" href="#"><h1 class="bg-warning-subtle">POS System</h1></a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a aria-current="page" class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Orders</a>
+                        <a aria-current="page" class="nav-link active" href="#">Customer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Items</a>
+                        <a aria-current="page" class="nav-link active" href="#">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active" href="#">Order</a>
                     </li>
 
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            Others
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
+                    <!--
+                                        <li class="nav-item dropdown">
+                                            <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                                               role="button">
+                                                Others
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
+                                        </li>
+                    -->
 
                 </ul>
 
                 <div class=" d-flex ">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Sign Up</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Log Out</a>
-                        </li>
+                        <!-- <li class="nav-item">
+                             <a aria-current="page" class="nav-link active bg-success">Sign Up</a>
+                         </li>
+                         <li class="nav-item">
+                             <a aria-current="page" class="nav-link active" href="#">Log Out</a>
+                         </li>-->
+                        <button class="btn btn-primary text-white" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">Sign Up
+                        </button>
+                        <!-- Button trigger modal -->
+                        <button class="btn btn-danger" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">Log Out
+                        </button>
                     </ul>
 
                 </div>
@@ -74,72 +84,73 @@
 <main>
 
     <section class="section-customer container">
-        <h2><i class="fa-solid fa-people-line"></i>  Customer</h2>
+        <h2><i class="fa-solid fa-people-line"></i> Customer</h2>
         <div>
             <article class="search">
-                <label class="bg-primary" for="searchCustomer">Search Customer</label>
-                <input id="searchCustomer" class="form-control form-control-sm" type="text"
-                       placeholder="Input Name/NIC/Tp Here" aria-label=".form-control-sm example">
-                <button type="button" class="btn btn-success">Serach</button>
+                <label class="bg-black" for="searchCustomer">Search Customer</label>
+                <input aria-label=".form-control-sm example" class="form-control form-control-sm" id="searchCustomer"
+                       placeholder="Input Name/NIC here" type="text">
+                <button class="btn btn-outline-primary" type="button">Search</button>
             </article>
             <div class="btnSide">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">New Customer</button>
+                <button class="btn btn-warning text-white" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">New
+                    Customer
+                </button>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">View Customers</button>
+                <button class="btn btn-dark" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">View
+                    Customers
+                </button>
             </div>
             <!--Model-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal"
+                 tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5 bg-success" id="exampleModalLabel">New Customer</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h1 class="modal-title fs-5 bg-primary" id="exampleModalLabel">New Customer</h1>
+                            <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
                         </div>
                         <div class="modal-body">
                             <form>
                                 <div class="mb-3">
-                                    <label for="exampleInputId" class="form-label">Customer ID :</label>
-                                    <input type="text" class="form-control" id="exampleInputId">
+                                    <label class="form-label" for="exampleInputId">Customer ID :</label>
+                                    <input class="form-control" id="exampleInputId" type="text">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputName" class="form-label">Customer Name :</label>
-                                    <input type="text" class="form-control" id="exampleInputName">
+                                    <label class="form-label" for="exampleInputName">Customer Name :</label>
+                                    <input class="form-control" id="exampleInputName" type="text">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputAddress" class="form-label">Customer Address :</label>
-                                    <input type="text" class="form-control" id="exampleInputAddress" >
+                                    <label class="form-label" for="exampleInputAddress">Customer Address :</label>
+                                    <input class="form-control" id="exampleInputAddress" type="text">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputSalary" class="form-label">Customer Salary :</label>
-                                    <input type="number" class="form-control" id="exampleInputSalary">
+                                    <label class="form-label" for="exampleInputSalary">Customer Salary :</label>
+                                    <input class="form-control" id="exampleInputSalary" type="number">
                                 </div>
 
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Save</button>
-                            <button type="button" class="btn btn-warning">Renew</button>
-                            <button type="button" class="btn btn-primary">Close</button>
+                            <button class="btn btn-success text-white " data-bs-dismiss="modal" type="button">Save</button>
+                            <button class="btn btn-warning text-white" type="button">Renew</button>
+                            <button class="btn btn-dark text-white" type="button">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-
-
-
         </div>
-        <div class="butttonList">
-            <button type="button" class="btn btn-danger">Delete</button>
-            <button type="button" class="btn btn-info">Details</button>
-            <button type="button" class="btn btn-success">Clear</button>
+        <div class="buttonList">
+            <button class="btn btn-danger" type="button">Delete</button>
+            <button class="btn btn-success" type="button">Details</button>
         </div>
         <div>
 
             <table class="table mt-3 bg-body-tertiary ">
-                <thead class="table bg-success">
+                <thead class="table bg-primary">
                 <tr>
                     <th scope="col">Customer Name</th>
                     <th scope="col">Age</th>
@@ -149,21 +160,21 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <th scope="row">C003</th>
-                    <td>Malitha</td>
+                    <th scope="row">C001</th>
+                    <td>Kamal</td>
                     <td>Panadura</td>
                     <td>10000.00</td>
                 </tr>
                 <tr>
-                    <th scope="row">C004</th>
-                    <td>Siripala</td>
+                    <th scope="row">C002</th>
+                    <td>Nimal</td>
                     <td>Galle</td>
                     <td>24000.00</td>
                 </tr>
                 <tr>
-                    <th scope="row">C005</th>
-                    <td>Jinadasa</td>
-                    <td>Panadura</td>
+                    <th scope="row">C003</th>
+                    <td>Amal</td>
+                    <td>Colombo</td>
                     <td>94000.00</td>
                 </tr>
                 </tbody>
@@ -177,19 +188,20 @@
         <h2><i class="fa-solid fa-boxes-stacked"></i> Items</h2>
         <div>
             <article class="search">
-                <label class="bg-primary" for="searchCustomer">Search Item</label>
-                <input id="searchItem" class="form-control form-control-sm" type="text"
-                       placeholder="Input Item Name/Code Here" aria-label=".form-control-sm example">
+                <label class="bg-black" for="searchCustomer">Search Item</label>
+                <input aria-label=".form-control-sm example" class="form-control form-control-sm" id="searchItem"
+                       placeholder="Input Item Name/Code Here" type="text">
 
                 <div class="row">
                     <div class="col-4">
-                        <button type="button" class="btn btn-success">Serach</button>
+                        <button class="btn btn-outline-primary" type="button">Search</button>
                     </div>
-                    <div class=" col-4 col-md-4" >
+                    <div class=" col-4 col-md-4">
 
-                        <select id="inputState" class="form-select">
-                            <option selected>Name</option>
-                            <option>...</option>
+                        <select class="form-select mt-3" id="inputState">
+                            <option selected>Item Name</option>
+                            <option>item1</option>
+                            <option>item2</option>
                         </select>
                     </div>
                 </div>
@@ -198,58 +210,62 @@
 
             <div class="btnSide2">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal1">New Item</button>
+                <button class="btn btn-warning text-white" data-bs-target="#exampleModal1" data-bs-toggle="modal" type="button">New
+                    Item
+                </button>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal1">View All Item</button>
+                <button class="btn btn-dark" data-bs-target="#exampleModal1" data-bs-toggle="modal" type="button">
+                    View All Item
+                </button>
             </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal1"
+                 tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5 bg-success" id="exampleModalLabel1">New Item</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h1 class="modal-title fs-5 bg-primary text-white" id="exampleModalLabel1">New Item</h1>
+                            <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
                         </div>
                         <div class="modal-body">
                             <form>
                                 <div class="mb-3">
-                                    <label for="exampleInputId" class="form-label">Item Code :</label>
-                                    <input type="text" class="form-control" id="exampleInputId1">
+                                    <label class="form-label" for="exampleInputId">Item Code :</label>
+                                    <input class="form-control" id="exampleInputId1" type="text">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputName" class="form-label">Item Name :</label>
-                                    <input type="text" class="form-control" id="exampleInputName1">
+                                    <label class="form-label" for="exampleInputName">Item Name :</label>
+                                    <input class="form-control" id="exampleInputName1" type="text">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPrice" class="form-label">Item Price :</label>
-                                    <input type="number" class="form-control" id="exampleInputPrice" >
+                                    <label class="form-label" for="exampleInputPrice">Item Price :</label>
+                                    <input class="form-control" id="exampleInputPrice" type="number">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputQuantity" class="form-label">Item Quantity :</label>
-                                    <input type="number" class="form-control" id="exampleInputQuantity">
+                                    <label class="form-label" for="exampleInputQuantity">Item Quantity :</label>
+                                    <input class="form-control" id="exampleInputQuantity" type="number">
                                 </div>
 
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Save</button>
-                            <button type="button" class="btn btn-warning">Renew</button>
-                            <button type="button" class="btn btn-primary">Close</button>
+                            <button class="btn btn-success text-white " data-bs-dismiss="modal" type="button">Save</button>
+                            <button class="btn btn-warning text-white" type="button">Renew</button>
+                            <button class="btn btn-dark text-white" type="button">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="butttonList">
-            <button type="button" class="btn btn-success">Delete</button>
-            <button type="button" class="btn btn-danger">Details</button>
-            <button type="button" class="btn btn-info">Clear</button>
+        <div class="buttonList mb-3">
+            <button class="btn btn-danger" type="button">Delete</button>
+            <button class="btn btn-success text-white" type="button">Details</button>
         </div>
         <div class="container">
 
             <table class="table mt-3 bg-body-tertiary">
-                <thead class="bg-success">
+                <thead class="bg-primary">
                 <tr>
                     <th scope="col">Item Name</th>
                     <th scope="col">Price</th>
@@ -259,22 +275,22 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <th scope="row">111</th>
-                    <td>1111</td>
-                    <td>11.00</td>
-                    <td>111</td>
+                    <th scope="row">I001</th>
+                    <td>Nestomalt 400g</td>
+                    <td>2</td>
+                    <td>1660.00</td>
                 </tr>
                 <tr>
-                    <th scope="row">P002</th>
+                    <th scope="row">I002</th>
                     <td>Keerisamba 5kg</td>
-                    <td>525.00</td>
-                    <td>200</td>
+                    <td>1</td>
+                    <td>1275.00</td>
                 </tr>
                 <tr>
-                    <th scope="row">P003</th>
-                    <td>Keerisamba 10kg</td>
-                    <td>995.00</td>
-                    <td>36</td>
+                    <th scope="row">I003</th>
+                    <td>Detergent Powder 1kg</td>
+                    <td>1</td>
+                    <td>566.00</td>
                 </tr>
                 </tbody>
             </table>
@@ -284,170 +300,165 @@
     <br><br>
 
 
-
-
     <!-- ---------------------------------------------------->
-    <section class="section-placeOrder container">
-        <div class="row">
-            <div class="col-4">
-                <main class="container-fluid">
-                    <article class="inVoceDetails">
-                        <label class=" label_Head bg-success" for="exampleInputId">InVoice Details</label>
-                        <form>
-                            <div class="row mt-5" >
-                                <div class="mb-3 col-5">
-                                    <label for="exampleInputId" class="form-label">Order Id  :</label>
-                                    <input type="text" class="form-control" id="exampleInputId2" >
-                                </div>
-                                <div class="mb-3 col-5" >
-                                    <label for="exampleInputDate" class="form-label">Date  :</label>
-                                    <input type="date" class="form-control" id="exampleInputDate">
-                                </div>
-                            </div>
+    <div>
+        <section class="section-placeOrder container">
+            <div class="row">
+                <div class="col-4">
+                    <main class="container-fluid">
+                        <article class="inVoceDetails">
+                            <label class=" label_Head bg-primary" for="exampleInputId">InVoice Details</label>
 
-
-                            <div class="mb-3 row">
-                                <div class="col-5">
-                                    <label for="inputCustomer" class="form-label">Customer  :</label>
-                                    <select id="inputCustomer" class="form-select">
-                                        <option selected></option>
-                                        <option>...</option>
-                                    </select>
+                            <form>
+                                <div class="row mt-5">
+                                    <div class="mb-3 col-5">
+                                        <label class="form-label" for="exampleInputId">Order Id :</label>
+                                        <input class="form-control" id="exampleInputId2" type="text">
+                                    </div>
+                                    <div class="mb-3 col-5">
+                                        <label class="form-label" for="exampleInputDate">Date :</label>
+                                        <input class="form-control" id="exampleInputDate" type="date">
+                                    </div>
                                 </div>
 
-                                <div class="mb-3 col-5">
-                                    <label for="exampleInputCustomerId" class="form-label">Customer Id  :</label>
-                                    <input type="text" class="form-control" id="exampleInputCustomerId" >
+
+                                <div class="mb-3 row">
+                                    <div class="col-5">
+                                        <label class="form-label" for="inputCustomer">Customer :</label>
+                                        <select class="form-select" id="inputCustomer">
+                                            <option selected></option>
+                                            <option>customer1</option>
+                                            <option>customer2</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3 col-5">
+                                        <label class="form-label" for="exampleInputCustomerId">Customer Id :</label>
+                                        <input class="form-control" id="exampleInputCustomerId" type="text">
+                                    </div>
                                 </div>
-                            </div>
 
 
-                            <div class="row">
-                                <div class="mb-3 col-5">
-                                    <label for="exampleInputName" class="form-label">Name  :</label>
-                                    <input type="text" class="form-control" id="exampleInputName2" >
+                                <div class="row">
+                                    <div class="mb-3 col-5">
+                                        <label class="form-label" for="exampleInputName">Name :</label>
+                                        <input class="form-control" id="exampleInputName2" type="text">
+                                    </div>
+                                    <div class="mb-3 col-5">
+                                        <label class="form-label" for="exampleInputSalary">Salary :</label>
+                                        <input class="form-control" id="exampleInputSalary2" type="number">
+                                    </div>
                                 </div>
-                                <div class="mb-3 col-5">
-                                    <label for="exampleInputSalary" class="form-label">Salary  :</label>
-                                    <input type="number" class="form-control" id="exampleInputSalary2" >
+
+
+                                <div class="mb-3 col-10">
+                                    <label class="form-label" for="exampleInputAddress">Address :</label>
+                                    <input class="form-control" id="exampleInputAddress2" type="text">
                                 </div>
-                            </div>
 
 
+                            </form>
+                        </article>
+                    </main>
+
+                </div>
+                <!---------------------------------------------------------------------------------------------- ?-->
+                <div class="col-4 ml-7">
+                    <main class="container-fluid col-xl col-lg-5 col-sm-6 ">
+
+                        <article class="inVoceDetails">
+                            <label class=" label_Head bg-primary" for="exampleInputId">Item Select</label>
+                            <form>
+                                <div class="row mt-5">
+                                    <div class="mb-3 col-5">
+                                        <label class="form-label" for="inputItem">Item :</label>
+                                        <select class="form-select" id="inputItem">
+                                            <option selected></option>
+                                            <option>item1</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3 col-6">
+                                        <label class="form-label" for="exampleInputItemCode">Item Code :</label>
+                                        <input class="form-control" id="exampleInputItemCode" type="text">
+                                    </div>
+                                </div>
 
 
-                            <div class="mb-3 col-10">
-                                <label for="exampleInputAddress" class="form-label">Address  :</label>
-                                <input type="text" class="form-control" id="exampleInputAddress2">
-                            </div>
+                                <div class="row">
+                                    <div class="mb-3 col-4">
+                                        <label class="form-label" for="exampleInputName">Item Name :</label>
+                                        <input class="form-control" id="exampleInputName3" type="text">
+                                    </div>
+                                    <div class="mb-3 col-4">
+                                        <label class="form-label" for="exampleInputSalary">Price :</label>
+                                        <input class="form-control" id="exampleInputSalary3" type="number">
+                                    </div>
+                                    <div class="mb-3 col-4">
+                                        <label class="form-label" for="exampleInputQtyOnHand">qtyOnHand :</label>
+                                        <input class="form-control" id="exampleInputQtyOnHand" type="number">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" for="exampleInputQtyOrder">Order Quantity :</label>
+                                    <input class="form-control" id="exampleInputQtyOrder" type="number">
+                                </div>
 
 
+                                <button class="btn btn-danger" id="btnAddItem" type="submit">Add Item</button>
+                            </form>
 
-                        </form>
-                    </article>
-                </main>
+                        </article>
+                    </main>
+
+                    <!-- ------------------------------------------------------------>
+
+
+                    <main class="container-fluid">
+
+                        <article class="inVoceDetails mt-5">
+                            <label class=" label_Head bg-primary" for="exampleInputId">Payment Details</label>
+                            <form>
+
+                                <div class="row">
+                                    <div class="mb-3 col-4">
+                                        <label class="form-label" for="exampleInputName">Total: 1050Rs/=</label><br>
+                                        <label class="form-label" for="exampleInputSalary">SubTotal: 945Rs/=</label>
+                                        <!--<input type="number" class="form-control" id="exampleInputCash" >-->
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3 col-4">
+                                        <label class="form-label" for="exampleInputName">Cash :</label>
+                                        <input class="form-control" id="exampleInputCash" type="number">
+                                    </div>
+                                    <div class="mb-3 col-4">
+                                        <label class="form-label" for="exampleInputSalary">Discount :</label>
+                                        <input class="form-control" id="exampleInputDiscount" type="number">
+                                    </div>
+
+                                </div>
+
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" for="exampleInputQtyOrder">Balance :</label>
+                                    <input class="form-control" id="exampleInputBalance" type="number">
+                                </div>
+
+                                <button class="btn btn-success" id="btnPurchase" type="submit">Purchase</button>
+                            </form>
+
+                        </article>
+
+
+                    </main>
+
+                </div>
 
             </div>
-            <!---------------------------------------------------------------------------------------------- ?-->
-            <div class="col-4">
-                <main class="container-fluid">
-
-                    <article class="inVoceDetails">
-                        <label class=" label_Head bg-success" for="exampleInputId">Item Select</label>
-                        <form>
-                            <div class="row mt-5" >
-                                <div class="col-6">
-                                    <label for="inputItem" class="form-label">Item  :</label>
-                                    <select id="inputItem" class="form-select">
-                                        <option selected></option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3 col-6">
-                                    <label for="exampleInputItemCode" class="form-label">Item Code  :</label>
-                                    <input type="text" class="form-control" id="exampleInputItemCode" >
-                                </div>
-                            </div>
-
-
-
-                            <div class="row">
-                                <div class="mb-3 col-4">
-                                    <label for="exampleInputName" class="form-label">Item Name  :</label>
-                                    <input type="text" class="form-control" id="exampleInputName3" >
-                                </div>
-                                <div class="mb-3 col-4">
-                                    <label for="exampleInputSalary" class="form-label">Price  :</label>
-                                    <input type="number" class="form-control" id="exampleInputSalary3" >
-                                </div>
-                                <div class="mb-3 col-4">
-                                    <label for="exampleInputQtyOnHand" class="form-label">qtyOnHand  :</label>
-                                    <input type="number" class="form-control" id="exampleInputQtyOnHand" >
-                                </div>
-                            </div>
-
-                            <div class="mb-3 col-12">
-                                <label for="exampleInputQtyOrder" class="form-label">Order Quantity  :</label>
-                                <input type="number" class="form-control" id="exampleInputQtyOrder" >
-                            </div>
-
-
-
-                            <button type="submit" class="btn btn-danger" id="btnAddItem">Add Item</button>
-                        </form>
-
-                    </article>
-                </main>
-
-
-                <!-- ------------------------------------------------------------>
-
-
-
-                <main class="container-fluid">
-
-                    <article class="inVoceDetails">
-                        <!--               <label class=" label_Head bg-success" for="exampleInputId">Item Select</label>-->
-                        <form>
-
-                            <div class="row">
-                                <div class="mb-3 col-4">
-                                    <label for="exampleInputName" class="form-label">Total: 1050Rs/=</label><br>
-                                    <label for="exampleInputSalary" class="form-label">SubTotal: 945Rs/=</label>
-                                    <!--                           <input type="number" class="form-control" id="exampleInputCash" >-->
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="mb-3 col-4">
-                                    <label for="exampleInputName" class="form-label">Cash :</label>
-                                    <input type="number" class="form-control" id="exampleInputCash" >
-                                </div>
-                                <div class="mb-3 col-4">
-                                    <label for="exampleInputSalary" class="form-label">Discount  :</label>
-                                    <input type="number" class="form-control" id="exampleInputDiscount" >
-                                </div>
-
-                            </div>
-
-                            <div class="mb-3 col-12">
-                                <label for="exampleInputQtyOrder" class="form-label">Balance  :</label>
-                                <input type="number" class="form-control" id="exampleInputBalance" >
-                            </div>
-
-                            <button type="submit" class="btn btn-success" id="btnPurchase">Purchase</button>
-                        </form>
-
-                    </article>
-
-
-                </main>
-
-            </div>
-
-        </div>
-    </section>
+        </section>
+    </div>
 </main>
 
 
